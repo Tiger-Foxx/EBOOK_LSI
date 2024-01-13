@@ -1,0 +1,148 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!---AUTHOR : DONFACK PASCAL-->
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="bread-inner">
+					<ul class="bread-list">
+						<li><a href="{% url 'index' %}">Home<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="{% url 'MesLivres' user.id %}">Mes Lectures</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+
+<div class="shopping-cart section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<table class="table shopping-summery">
+					<thead>
+						<tr class="main-hading">
+							<th>LIVRES</th>
+							<th>TITRES</th>
+							<th class="text-center">DATE</th>
+							<th class="text-center">AUTEUR</th>
+							<th class="text-center"><i class="ti-trash remove-icon"></i></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% if MesLivres %}
+
+						{% for livre in MesLivres %}
+
+						<tr id="row-{{livre.id}}">
+							<td class="image" data-title="No"><a href="{{livre.get_absolute_url}}"><img
+										src="{{livre.image1.url}}" style="height: 100px;width:100px" alt="#"></a></td>
+							<td class="product-des" data-title="Description">
+								<p class="product-name"><a href="{{livre.get_absolute_url}}">{{livre.Titre}}</a></p>
+								<p class="product-des">{{ livre.description|truncatechars:100 }}</p>
+							</td>
+							<td class="price" data-title="Date"><span>le {{livre.date}} </span></td>
+							{% if livre.Aut_is_User %}
+							<td class="total-amount" data-title="Auteur"><span>PAR VOUS</span></td>
+							{% else %}
+							<td class="total-amount" data-title="Auteur"><span>{{livre.Auteur}}</span></td>
+							{% endif %}
+
+							<td class="action" data-title="Remove"><a href="#" id="{{livre.id}}"
+									onclick="maFonction(this.id)"><i class="ti-trash remove-icon"></i></a>
+							</td>
+
+						</tr>
+
+						{% endfor %}
+						<script>
+							function maFonction(id) {
+								if (confirm("VOULEZ-VOUS VRAIMENT SUPPRIMER CE LIVRE DE VOS LECTURES ?")) {
+									// Création de la requête AJAX
+									fetch('/SupprimerLivre/' + id, {
+										method: 'DELETE', // Méthode HTTP pour la suppression
+										headers: {
+											'X-CSRFToken': getCookie('csrftoken'), // Récupération du token CSRF
+										},
+									})
+										.then(response => {
+											if (response.ok) {
+												// Suppression de la ligne de la table si la requête est réussie
+												document.getElementById('row-' + id).remove();
+												alert("Livre supprimé avec succès !");
+												document.getElementById("tot").innerText = parseInt(document.getElementById("tot").innerHTML) - 1
+
+											} else {
+												alert("Une erreur s'est produite lors de la suppression.");
+											}
+										})
+										.catch(error => {
+											console.error('Erreur lors de la suppression :', error);
+										});
+								}
+							}
+
+							// Fonction pour obtenir le cookie CSRF
+							function getCookie(name) {
+								let cookieValue = null;
+								if (document.cookie && document.cookie !== '') {
+									const cookies = document.cookie.split(';');
+									for (let i = 0; i < cookies.length; i++) {
+										const cookie = cookies[i].trim();
+										if (cookie.substring(0, name.length + 1) === (name + '=')) {
+											cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+											break;
+										}
+									}
+								}
+								return cookieValue;
+							}
+
+						</script>
+
+						{% else %}
+						<div class="section-title" style="margin-top: 10px; margin-bottom: 15px">
+							<h2 style="text-transform: uppercase;">VOUS N'AVEZ RIEN PUBLIE POUR LE MOMENT</h2>
+						</div>
+						{% endif %}
+
+
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="total-amount">
+					<div class="row">
+						<div class="col-lg-8 col-md-5 col-12">
+							<div class="left">
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-7 col-12">
+							<div class="right">
+								<ul>
+									<li>Total des livres :<span id="tot"> {{ MesLivres|length }}</span></li>
+									<li>Lectures : <span>Gratuites</span></li>
+
+								</ul>
+								<div class="button5">
+									<a href="{% url 'premium' %}" class="btn">Evoluer le compte</a>
+									<a href="#" class="btn">Nous Contacter</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

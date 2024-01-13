@@ -1,0 +1,436 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="hero-slider">
+  {% load static %}
+  <!-- Single Slider -->
+  <!---AUTHOR : DONFACK PASCAL-->
+
+  <div class="single-slider" style="background-image: url('static/images/back2.jpg')">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-9 offset-lg-3 col-12">
+          <div class="text-inner">
+            <div class="row">
+              <div class="col-lg-7 col-12">
+                <div class="hero-text">
+                  {% if user.is_authenticated %}
+                  <h1>
+                    <span>Bienvenue , <span style="display: inline;text-transform:uppercase">{{user.username}}</span>
+                    </span>Communauté
+                    Livres-Auteurs POUR TOUS
+                  </h1>
+                  {% else %}
+                  <h1>
+                    <span>Désormais , vos livres à un seul endroit</span>Communauté Livres-Auteurs POUR TOUS
+                  </h1>
+                  {% endif %}
+
+                  <p>
+                    Cette Plateforme est concue pour etre une bilbiotheque
+                    numérique Mais aussi un centre de partage pour les auteurs,
+                    alors faites vous plaisir et soyez FOU!!
+                  </p>
+                  <div class="button">
+                    <a href="detail-read.html" class="btn">Lire Maintenant!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ End Single Slider -->
+</section>
+
+<!-- Start Small Banner  -->
+<div class="section-title" style="margin-top:25px;margin-bottom:15px">
+  <h2>QUELQUES AUTEURS POPULAIRES</h2>
+</div>
+<section class="small-banner section">
+  <div class="container-fluid">
+
+    <div class="container-sliders swiper">
+      <div class="slide-container">
+        <div class="card-wrapper swiper-wrapper">
+          {% for auteur in Auteurs_pop %}
+
+          <div class="card swiper-slide">
+            <a href="{% url 'LivresAuteur' auteur.id %}">
+              <div class="image-box">
+                <img src="{{auteur.profil.url}}" alt="{{auteur.username}}" />
+              </div>
+            </a>
+            <div class="profile-details">
+              <img src="{{auteur.profil.url}}" alt="{{auteur.username}}" />
+              <div class="name-job">
+                <a href="{% url 'LivresAuteur' auteur.id %}">
+                  <h3 class="name">{{auteur.username}}</h3>
+                </a>
+                <h4 class="job">{{auteur.email}}</h4>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-navBtn"
+        style="width:50px;height:50px;border-radius:50%;color:orange; font-size:8px"></div>
+      <div class="swiper-button-prev swiper-navBtn"
+        style="width:50px;height:50px;border-radius:50%;color:orange;font-size:8px"></div>
+
+    </div>
+
+    <script src="{% static 'Responsive Card Slider/js-slider/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'Responsive Card Slider/js-slider/script.js' %}"></script>
+  </div>
+</section>
+
+
+<div class="product-area section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>CATEGORIES EN TENDANCES</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="product-info">
+          <div class="nav-main">
+            <!-- Tab Nav -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              {% for categorie in categories %}
+              {% if categorie.nom_categorie == "MANGAS" %}
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#{{categorie.nom_categorie}}"
+                  role="tab">{{categorie.nom_categorie}}</a>
+              </li>
+
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#{{categorie.nom_categorie}}"
+                  role="tab">{{categorie.nom_categorie}}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <!--/ End Tab Nav -->
+          </div>
+          <div class="tab-content" id="myTabContent">
+            {% for categorie in categories %}
+            <!-- Start Single Tab -->
+
+            {% if categorie.nom_categorie == "MANGAS" %}
+            <div class="tab-pane fade show active" id="{{categorie.nom_categorie}}" role="tabpanel">
+              {% else %}
+              <div class="tab-pane fade" id="{{categorie.nom_categorie}}" role="tabpanel">
+                {% endif %}
+
+                <div class="tab-single">
+                  <div class="row">
+                    {% for livre in Tous_Les_Livres %}
+                    {% if livre.categorie.nom_categorie == categorie.nom_categorie %}
+
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="{{livre.get_absolute_url}}">
+                            <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+
+                            {% if livre.image2 %}
+                            <img class="hover-img" src="{{livre.image2.url}}" alt="#" />
+                            {% else %}
+                            <img class="hover-img" src="{{livre.image1.url}}" alt="#" />
+                            {% endif %}
+                            {% if livre.is_new %}
+                            <span class="new">Nouveau</span>
+                            {% else %}
+                            {% if livre.is_premium %}
+                            <span class="out-of-stock">premium</span>
+                            {% endif %}
+                            {% endif %}
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a title="Quick View" href="{{livre.get_absolute_url}}"><i
+                                  class="ti-eye"></i><span>Lire</span></a>
+
+
+                              <a title="Ajouter aux lectures" href="javascript:void(0);"
+                                onclick="ajouterAuxLectures({{livre.id}})"><i class="ti-plus"></i><span>Ajouter aux
+                                  lectures</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Lire" href="{{livre.get_absolute_url}}">Lire Maintenant</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3 style="font-size: 18px">
+                            TITRE :
+                            <a href="{{livre.get_absolute_url}}" style="
+                                color: orangered;
+                                text-transform: uppercase;
+                              "><b>{{livre.Titre}}</b></a>
+                          </h3>
+                          <h3>
+                            <a href="{{livre.get_absolute_url}}">Publié le : <b>{{livre.date}}</b></a>
+                          </h3>
+
+                          <div class="product-price">
+                            {% if livre.Aut_is_User %}
+                            <span><a href="{% url 'LivresAuteur' livre.Aut_User.id %}">
+                                Auteur : utilisateur - {{livre.Aut_User.username}}</a></span>
+                            {% else %}
+                            <span>Auteur : {{livre.Auteur}}</span>
+                            {% endif %}
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    {% endif %} {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <!--/ End Single Tab -->
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Midium Banner  -->
+  <section class="midium-banner">
+    <div class="container">
+      <div class="row">
+        <!-- Single Banner  -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="single-banner">
+            <img src="{% static 'images/back11.jpg' %}" alt="#" />
+            <div class="content">
+              <p>Compte Premium</p>
+              <h3>
+                Telecharger vos livres <br />
+                à <span> -50%</span>
+              </h3>
+              <a href="{% url 'premium' %}">Evoluer Maintenant</a>
+            </div>
+          </div>
+        </div>
+        <!-- /End Single Banner  -->
+        <!-- Single Banner  -->
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="single-banner">
+            <img src="{% static 'images/back33.jpg' %}" alt="#" />
+            <div class="content">
+              <p>SPECIAL</p>
+              <h3>
+                LIVRES <br />
+                EXCLUSISIFS <span> COMPTE PREMIUM</span>
+              </h3>
+              <a href="{% url 'premium' %}">Evoluer Maintenant</a>
+            </div>
+          </div>
+        </div>
+        <!-- /End Single Banner  -->
+      </div>
+    </div>
+  </section>
+  <!-- End Midium Banner -->
+
+  <div class="product-area most-popular section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h2>ELEMENTS POPULAIRES</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="owl-carousel popular-slider">
+            {% for livre in Livres_Populaires %}
+
+            <div class="single-product">
+              <div class="product-img" style="height: 420px; overflow: hidden">
+                <a href="{{livre.get_absolute_url}}">
+                  <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                  {% if livre.image2 %}
+                  <img class="hover-img" src="{{livre.image2.url}}" alt="#" />
+                  {% else %}
+                  <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                  {% endif %}
+
+                  {% if livre.is_new %}
+                  <span class="new">Nouveau</span>
+                  {% else %}
+                  <span class="out-of-stock">Populaire</span>
+                  {% endif %}
+                </a>
+                <div class="button-head">
+                  <div class="product-action">
+                    <a title="Quick View" href="{{livre.get_absolute_url}}"><i class="ti-eye"></i><span>Lire</span></a>
+                    <a title="Compare" href="{% url 'AjoutLectures' livre.id %}"><i class="ti-plus"></i><span>Ajouter
+                        aux lectures</span></a>
+                  </div>
+                  <div class="product-action-2">
+                    <a title="Ajouter aux lectures" href="javascript:void(0);"
+                      onclick="ajouterAuxLectures({{livre.id}})">Ajouter aux lectures</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-content">
+                <h3 style="font-size: 18px">
+                  TITRE :
+                  <a href="{{livre.get_absolute_url}}"
+                    style="color: orangered; text-transform: uppercase"><b>{{livre.Titre}}</b></a>
+                </h3>
+                <h3>
+                  <a href="{{livre.get_absolute_url}}">Publié le : <b>{{livre.date}}</b></a>
+                </h3>
+
+                <div class="product-price">
+                  {% if livre.Aut_is_User %}
+                  <span><a href="{% url 'LivresAuteur' livre.Aut_User.id %}">
+                      Auteur : utilisateur - {{livre.Aut_User.username}}</a></span>
+                  {% else %}
+                  <span>Auteur : {{livre.Auteur}}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function ajouterAuxLectures(idLiv) {
+      idLivre = parseInt(idLiv)
+      fetch("AjoutLectures/" + idLivre, {
+        method: 'POST',
+        headers: {
+          'X-CSRFToken': getCookie('csrftoken'), // Assurez-vous d'inclure le token CSRF
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 'livre_id': idLivre }) // Envoyez l'ID du livre dans le corps de la requête
+      })
+        .then(response => {
+
+          alert("Livre ajouté aux lectures avec succès !");
+          // Vous pouvez également mettre à jour l'interface utilisateur ici si nécessaire
+          document.getElementById("countLec").innerText = parseInt(document.getElementById("countLec").innerText) + 1;
+          document.getElementById("countLec2").innerText = document.getElementById("countLec").innerText + " Lectures";
+
+        })
+        .catch(error => {
+          console.error("Erreur lors de l'ajout :", error);
+        });
+    }
+
+    // Fonction pour obtenir le cookie CSRF
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  </script>
+
+  <section class="shop-home-list section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="row">
+            <div class="col-12">
+              <div class="shop-section-title">
+                <h1>En Vente Physiquement</h1>
+              </div>
+            </div>
+          </div>
+
+          {% for livre in Tous_Les_Livres %}
+          {% if livre.prix > 0%}
+          <!-- Start Single List  -->
+          <div class="single-list">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="list-image overlay" style="width: 115px; height: 150px">
+                  <img src="{{livre.image1.url}}" alt="#" />
+                  <a href="{% url 'buy' livre.id %}" class="buy"><i class="fa fa-shopping-bag"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 no-padding">
+                <div class="content">
+                  <h4 class="title"><a href="{{livre.get_absolute_url}}">{{livre.Titre}}</a></h4>
+                  <p class="price with-discount">{{livre.prix}} FCFA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <!-- End Single List  -->
+          {% endfor %}
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-12"></div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="row">
+            <div class="col-12">
+              <div class="shop-section-title">
+                <h1>Recommandations de l'Administrateur</h1>
+              </div>
+            </div>
+          </div>
+          <!-- Start Single List  -->
+          {% for livre in Tous_Les_Livres %}
+          {% if livre.recommande %}
+          <!-- Start Single List  -->
+          <div class="single-list">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="list-image overlay" style="width: 115px; height: 150px">
+                  <img src="{{livre.image1.url}}" alt="#" />
+                  <a href="{{livre.get_absolute_url}}" class="buy"><i class="fa fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 no-padding">
+                <div class="content">
+                  <h4 class="title"><a href="{{livre.get_absolute_url}}">{{livre.Titre}}</a></h4>
+                  <p class="price with-discount">score : {{livre.score}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <!-- End Single List  -->
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+</div>
+{% endblock content %}

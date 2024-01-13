@@ -1,0 +1,91 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!---AUTHOR : DONFACK PASCAL-->
+
+<div class="section-title" style="margin-top: 25px; margin-bottom: 15px">
+    <h2>RESULTATS POUR " {{sujet}} "</h2>
+</div>
+
+
+<div class="product-area most-popular section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {% if categorie == "" %}
+                <div class="section-title">
+                    <h2>TOUTES CATEGORIES</h2>
+                </div>
+                {% else %}
+                <div class="section-title">
+                    <h2>CATEGORIE : {{categorie}}</h2>
+                </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel popular-slider">
+                    {% for livre in Livres_recherche %}
+
+                    <div class="single-product">
+                        <div class="product-img" style="height: 420px; overflow: hidden">
+                            <a href="{{livre.get_absolute_url}}">
+                                <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                                {% if livre.image2 %}
+                                <img class="hover-img" src="{{livre.image2.url}}" alt="#" />
+                                {% else %}
+                                <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                                {% endif %}
+
+
+                                {% if livre.is_new %}
+                                <span class="new">Nouveau</span>
+                                {% endif %}
+                            </a>
+                            <div class="button-head">
+                                <div class="product-action">
+                                    <a title="Quick View" href="{{livre.get_absolute_url}}"><i
+                                            class="ti-eye"></i><span>Lire</span></a>
+                                    <a title="Compare" href="{% url 'AjoutLectures' livre.id %}"><i
+                                            class="ti-plus"></i><span>Ajouter aux
+                                            lectures</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="{% url 'AjoutLectures' livre.id %}">Ajouter aux
+                                        lectures</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 style="font-size: 18px">
+                                TITRE :
+                                <a href="{{livre.get_absolute_url}}"
+                                    style="color: orangered; text-transform: uppercase"><b>{{livre.Titre}}</b></a>
+                            </h3>
+                            <h3>
+                                <a href="{{livre.get_absolute_url}}">Publié le : <b>{{livre.date}}</b></a>
+                            </h3>
+
+                            <div class="product-price">
+                                {% if livre.Aut_is_User %}
+                                <span><a href="">
+                                        Auteur : utilisateur - {{livre.Auteur}}</a></span>
+                                {% else %}
+                                <span>Auteur : {{livre.Auteur}}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

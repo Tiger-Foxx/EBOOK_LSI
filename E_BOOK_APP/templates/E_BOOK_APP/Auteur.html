@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!---AUTHOR : DONFACK PASCAL-->
+
+<div class="section-title" style="margin-top: 25px; margin-bottom: 15px">
+    <h2>Livres de <b style="text-transform: uppercase;">{{Auteur.username}}</b></h2>
+</div>
+
+
+<div class="product-area most-popular section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="display: flex;flex-direction:row;">
+                <div class="photo-auteur"
+                    style="border-radius:50%;overflow:hidden;width:300px;height:300px;justify-content:center;display:flex">
+                    <img src="{{Auteur.profil.url}}" alt="{{Auteur.username}}" style="object-fit: cover;">
+                </div>
+                <div class="descript" style="margin: 20px;">
+                    <h2 style="margin-bottom: 10px;text-decoration:underline;text-transform:uppercase;">
+                        {{Auteur.username}} </h2>
+                    <h3 style="color: gray;margin-bottom: 10px;">Email : {{Auteur.email}}</h3>
+                    <h4 style="color: rgb(188, 184, 184);">Tel : {{Auteur.telephone}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel popular-slider">
+                    {% for livre in Livres_Auteur %}
+
+                    <div class="single-product">
+                        <div class="product-img" style="height: 420px; overflow: hidden">
+                            <a href="{{livre.get_absolute_url}}">
+                                <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                                {% if livre.image2 %}
+                                <img class="hover-img" src="{{livre.image2.url}}" alt="#" />
+                                {% else %}
+                                <img class="default-img" src="{{livre.image1.url}}" alt="#" />
+                                {% endif %}
+
+
+                                {% if livre.is_new %}
+                                <span class="new">Nouveau</span>
+                                {% endif %}
+                            </a>
+                            <div class="button-head">
+                                <div class="product-action">
+                                    <a title="Quick View" href="{{livre.get_absolute_url}}"><i
+                                            class="ti-eye"></i><span>Lire</span></a>
+                                    <a title="Compare" href="{% url 'AjoutLectures' livre.id %}"><i
+                                            class="ti-plus"></i><span>Ajouter aux
+                                            lectures</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="{% url 'AjoutLectures' livre.id %}">Ajouter aux
+                                        lectures</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 style="font-size: 18px">
+                                TITRE :
+                                <a href="{{livre.get_absolute_url}}"
+                                    style="color: orangered; text-transform: uppercase"><b>{{livre.Titre}}</b></a>
+                            </h3>
+                            <h3>
+                                <a href="{{livre.get_absolute_url}}">Publié le : <b>{{livre.date}}</b></a>
+                            </h3>
+
+                            <div class="product-price">
+                                {% if livre.Aut_is_User %}
+                                <span><a href="">
+                                        Auteur : utilisateur - {{livre.Aut_User.username}}</a></span>
+                                {% else %}
+                                <span>Auteur : {{livre.Auteur}}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

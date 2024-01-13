@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+
+<!---AUTHOR : DONFACK PASCAL-->
+
+
+
+{% block content %}
+
+
+{% if post %}
+
+{% if is_valid %}
+<script>
+	alert("ENVOIE AVEC SUCCES !");
+</script>
+{% else %}
+<script>
+	alert("ECHEC DE L'ENVOIE !");
+</script>
+{% endif %}
+
+{% endif %}
+<script>
+	function Aut_is_User() {
+		box = document.getElementById("Aut_is_User");
+		label = document.getElementById("label_click");
+		champ = document.getElementById("Auteur");
+		if (!box.checked) {
+			label.style = "color:red;";
+			champ = document.getElementById("Auteur");
+			champ.style = "display:none;";
+			champ.value = "{{user.username}}";
+			alert("Auteur (Vous) : " + champ.value);
+		}
+		else {
+			label.style = "color:black;";
+			champ.style = "display:block;";
+			alert("Auteur : " + champ.value);
+		}
+
+	}
+</script>
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="bread-inner">
+					<ul class="bread-list">
+						<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="#">Publier</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+
+<section id="contact-us" class="contact-us section">
+	<div class="container">
+		<div class="contact-head">
+			<div class="row">
+				<div class="col-lg-8 col-12">
+					<div class="form-main">
+						<div class="title">
+							<h4>Partagez avec le Monde !</h4>
+							<h3>Publier une Oeuvre</h3>
+						</div>
+
+						<input type="text" hidden="true" id="Nom_User" value="0">
+						<form class="form" method="post" action="publier" enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-lg-6 col-12">
+									<label for="Aut_is_User" onclick="Aut_is_User()"
+										style="font-weight: 900;cursor :pointer" id="label_click"> <i
+											class="fa fa-user-circle-o"></i> je suis
+										L'auteur </label>
+									<input type="checkbox" hidden="true" name="Aut_is_User" id="Aut_is_User">
+
+									<div style="display: none;">
+										<select name="Aut_User" id="Aut_User">
+											<option value="{{user.id}}">{{user.id}}</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<label for="Auteur">Auteur<span>*</span></label>
+										<input name="Auteur" id="Auteur" type="text" required>
+									</div>
+								</div>
+								<div class="col-lg-6 col-12">
+									<div class="form-group">
+										<label>Titre<span>*</span></label>
+										<input name="Titre" type="text" placeholder="titre" required>
+									</div>
+								</div>
+								<div class="col-lg-6 col-12">
+									<div class="form-group">
+
+										<select name="categorie" id="categorie" required>
+
+											{% for categorie in categories %}
+											<option value="{{categorie.nom_categorie}}">{{categorie.nom_categorie}}
+											</option>
+											{% endfor %}
+
+										</select>
+										<label style="margin-left: 5px;" for="categorie">Categorie<span>*</span></label>
+									</div>
+								</div>
+								<div class="col-lg-6 col-12">
+									<div class="form-group">
+										<label>Prix (Si le livre est en vente )<span></span></label>
+										<input name="prix" type="number" placeholder="prix FCFA">
+									</div>
+								</div>
+								<div class="col-lg-6 col-12">
+									<div class="form-group">
+										<label>Image 1 <span>*</span></label>
+										<input name="image1" type="file" accept="image/png,image/jpeg,image/bmp"
+											placeholder="image 1" required>
+									</div>
+									<div class="form-group">
+										<label>Image 2 (Facultatif) <span></span></label>
+										<input name="image2" type="file" accept="image/png,image/jpeg,image/bmp"
+											placeholder="image 2">
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-group message">
+										<label>description<span>*</span></label>
+										<textarea name="description" placeholder=" decrivez le Livre "
+											required></textarea>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label>Livre Pdf <span>*</span></label>
+										<input name="pdf" type="file" accept=".pdf" placeholder="fichier pdf" required>
+									</div>
+
+								</div>
+								<div class="col-12">
+									<div class="form-group button">
+										<button type="submit" class="btn ">Publier le livre</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="single-head">
+						<div class="single-info">
+							<i class="fa fa-phone"></i>
+							<h4 class="title">Contactez- nous si besoin:</h4>
+							<ul>
+								<li>+237 658866639</li>
+								<li>+237 694388283</li>
+							</ul>
+						</div>
+						<div class="single-info">
+							<i class="fa fa-envelope-open"></i>
+							<h4 class="title">Email:</h4>
+							<ul>
+								<li><a href="mailto:info@yourwebsite.com">info@LsiBook.com</a></li>
+							</ul>
+						</div>
+						<div class="single-info">
+							<i class="fa fa-location-arrow"></i>
+							<h4 class="title">Notre Addresse:</h4>
+							<ul>
+								<li>Yaounde ENSPY.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

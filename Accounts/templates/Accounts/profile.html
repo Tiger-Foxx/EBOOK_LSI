@@ -1,0 +1,123 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!---AUTHOR : DONFACK PASCAL-->
+
+{% if not is_valid %}
+<script>
+    alert("Formulaire Invalide !");
+</script>
+{% endif %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-inner">
+                    <ul class="bread-list">
+                        <li><a href="/">Acceuil<i class="ti-arrow-right"></i></a></li>
+                        <li class="active"><a href="#">Mon compte</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Checkout -->
+<section class="shop checkout section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <div class="checkout-form">
+                    <h2>Bienvenue dans Votre Compte Utilisateur : {{user.username}}</h2>
+                    <p>S'il vous plait remplissez le formulaire pour apporter des modifications</p>
+                    <!-- Form -->
+                    <form class="form" action="{% url 'profileUser' %}" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label>Nom<span>*</span></label>
+                                    <input type="text" placeholder="username" name="username" value="{{user.username}}"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label>Photo<span>*</span></label>
+                                    <input type="file" name="profil" accept="image/png, image/jpeg,image/bmp"
+                                        value="{{user.profil.url}}">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label>Email<span>*</span></label>
+                                    <input type="email" name="email" placeholder="email" value="{{user.email}}"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label>Telephone<span>*</span></label>
+                                    <input type="text" name="telephone" placeholder="telephone"
+                                        value="{{user.telephone}}" required>
+                                </div>
+                            </div>
+                            <button type="submit" id="btnS" hidden="true">Enregistrer les modifications</button>
+                        </div>
+                    </form>
+                    <script>
+                        function MaFonction() {
+                            document.getElementById("btnS").click();
+                        }
+                    </script>
+                    <!--/ End Form -->
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="order-details">
+                    <!-- Order Widget -->
+                    <div class="single-widget">
+                        <h2>VOS INFORMATIONS</h2>
+                        <div class="content">
+                            <ul>
+                                {% if user.is_premium %}
+                                <li>Abonement : <b><span> Utilisateur Premium</span></b></li>
+                                {% else %}
+                                <li>Aucun Abonnement Premium</li>
+                                {% endif %}
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/ End Order Widget -->
+                    <!-- Order Widget -->
+                    <div class="single-widget">
+                        <h2>PHOTO</h2>
+                        <div class="content">
+                            <img src="{{user.profil.url}}" alt="{{user.username}}">
+                        </div>
+                    </div>
+                    <!--/ End Order Widget -->
+                    <!-- Payment Method Widget -->
+
+                    <!--/ End Payment Method Widget -->
+                    <!-- Button Widget -->
+                    <div class="single-widget get-button">
+                        <div class="content">
+                            <div class="button">
+                                <a href="#" class="btn" onclick="MaFonction()">Modifier les informations</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ End Button Widget -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Checkout -->
+{% endblock content %}

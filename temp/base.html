@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	{% load static %}
+	<!---AUTHOR : DONFACK PASCAL-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>PROJET PROGRAMMATION-WEB</title>
+	<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'Responsive Card Slider/css/style-slider.css' %}">
+	<link rel="stylesheet" href="{% static 'Responsive Card Slider/css/swiper-bundle.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/niceselect.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flex-slider.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+</head>
+
+<body class="js">
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader-inner">
+			<div class="preloader-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- End Preloader -->
+	<script>
+
+		function SelCat() {
+			searchCat = document.getElementById('cat');
+			searchCat.value = document.getElementById('Cate').value;
+		}
+
+	</script>
+	<!-- Header -->
+	<header class="header shop">
+		<!-- Topbar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-12 col-12">
+						<!-- Top Left -->
+						<div class="top-left">
+							<ul class="list-main">
+								<li><i class="ti-headphone-alt"></i> +237 658 86 66 39</li>
+								<li><i class="ti-email"></i> foxNumerique@gmail.com</li>
+							</ul>
+						</div>
+						<!--/ End Top Left -->
+					</div>
+					<div class="col-lg-7 col-md-12 col-12">
+						<!-- Top Right -->
+						<div class="right-content">
+							<ul class="list-main">
+								<li><i class="ti-location-pin"></i>Ecole Polytechnique</li>
+								{% if user.is_authenticated %}
+								<li><i class="ti-user"></i> <a href="{% url 'profileUser' %}">Mon Compte</a></li>
+								<li><i class="ti-power-off"></i><a href="{% url 'logout' %}">Se Deconnecter</a></li>
+								{% else %}
+								<li><i class="ti-power-off"></i><a href="{% url 'register' %}">Creer un Compte</a></li>
+								<li><i class="ti-power-off"></i><a href="{% url 'login' %}">Se Connecter</a></li>
+								{% endif %}
+
+
+
+							</ul>
+						</div>
+						<!-- End Top Right -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Topbar -->
+		<div class="middle-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-12">
+						<!-- Logo -->
+						<div class="logo">
+							<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+						</div>
+						<!--/ End Logo -->
+						<!-- Search Form -->
+						{% if user.is_authenticated %}
+						<div class="search-top">
+							<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+							<!-- Search Form -->
+							<div class="search-top">
+								<form class="search-form" action="{% url 'rechercher' %}" method="get">
+									<input type="text" placeholder="Recherchez ici..." name="search">
+									<button value="search" type="submit"><i class="ti-search"></i></button>
+								</form>
+							</div>
+							<!--/ End Search Form -->
+						</div>
+						<!--/ End Search Form -->
+						{% endif %}
+
+						<div class="mobile-nav"></div>
+					</div>
+					{% if user.is_authenticated %}
+					<div class="col-lg-8 col-md-7 col-12">
+						<div class="search-bar-top">
+							<div class="search-bar">
+
+								<select id="Cate" onchange="SelCat()">
+									<option selected="selected" value="">Toutes</option>
+
+
+									{% for categorie in categories %}
+									<option value="{{categorie.nom_categorie}}">{{categorie.nom_categorie}}</option>
+									{% endfor %}
+
+								</select>
+
+								<form method="get" action="{% url 'rechercher' %}">
+									<input type="text" style="display: none;" id="cat" name="categorie" value="">
+									<input name="search" id="search" placeholder="Recherchez Vos Livres ICI..."
+										type="text">
+									<button class="btnn"><i class="ti-search"></i></button>
+								</form>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-12">
+						<div class="right-bar">
+
+							<div class="sinlge-bar">
+								<a href="#" class="single-icon"><i class="fa fa-user-circle-o"
+										aria-hidden="true"></i></a>
+							</div>
+							<div class="sinlge-bar shopping">
+								<a href="#" class="single-icon"><i class="fa-solid fa-bookmark fa-bounce"></i> <span
+										class="total-count" id="countLec">{{ lectures|length }}</span></a>
+								<div class="shopping-item">
+									<div class="dropdown-cart-header">
+										<span>{{ lectures|length }} Lectures</span>
+										<a href="{% url 'MesLectures' user.id %}">Voir les Lectures</a>
+									</div>
+									<ul class="shopping-list">
+
+										{% for lecture in lectures %}
+
+
+										<li>
+											<a href="{% url 'SupprimerLecture' lecture.id %}" class="remove"
+												title="Remove this item"><i class="fa fa-remove"></i></a>
+											<a class="cart-img" href="{{lecture.livre.get_absolute_url}}"><img
+													src="{{lecture.livre.image1.url}}" alt="#"></a>
+											<h4><a href="#"> {{lecture.livre.titre}} </a></h4>
+											<p class="quantity"> {{lecture.livre.date}} <span class="amount">
+													{{lecture.livre.Auteur}}</span>
+											</p>
+										</li>
+
+										{% endfor %}
+									</ul>
+									<div class="bottom">
+										<div class="total">
+											<span>Total</span>
+											<span class="total-amount" id="countLec2">{{ lectures|length }}
+												lectures</span>
+										</div>
+										{% if not user.is_premium %}
+										<a href="{% url 'premium' %}" class="btn animate">Passer Premium</a>
+										{% else %}
+										<a href="#" class="btn animate" style="color: yellow;">Vous Etes Premium</a>
+										{% endif %}
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<!-- Header Inner -->
+		<div class="header-inner">
+			<div class="container">
+				<div class="cat-nav-head">
+					<div class="row">
+
+
+						{% if user.is_authenticated %}
+						{% if is_index %}
+						<!--CATEGORIES DE L'EN-TETE-->
+						<div class="col-lg-3">
+							<div class="all-category">
+								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+								<ul class="main-category">
+
+									{% for categorie in categories %}
+									<li><a href="#">{{categorie.nom_categorie}}</a></li>
+									{% endfor %}
+									<option selected="selected">Toutes</option>
+								</ul>
+							</div>
+						</div>
+						<!--CATEGORIES DE L'EN-TETE-->
+						{% endif %}
+
+
+						<div class="col-lg-9 col-12">
+							<div class="menu-area">
+								<nav class="navbar navbar-expand-lg">
+									<div class="navbar-collapse">
+										<div class="nav-inner">
+											<ul class="nav main-menu menu navbar-nav">
+												<li class="active"><a href="{% url 'index' %}">Acceuil</a></li>
+												<li><a href="{% url 'MesLivres' user.id %}">Mes Livres</a></li>
+												<li><a href="{% url 'MesLectures' user.id %}">Mes Lectures</a></li>
+
+												<li><a href="{% url 'publier' %}">Publier</a></li>
+												{% if not user.is_premium %}
+												<li><a href="{% url 'premium' %}">Evoluer le compte</i><span
+															class="new">Premium</span></a>
+												</li>
+												{% else %}
+												<li><a href="#" class="btn animate" style="color: yellow;">Vous Etes
+														Premium</a></li>
+												{% endif %}
+
+											</ul>
+										</div>
+									</div>
+								</nav>
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Header Inner -->
+	</header>
+	<!--/ End Header -->
+
+	{% block content %}
+
+	{% endblock content %}
+
+	<section class="shop-services section home">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-eye"></i>
+						<h4>Lecture gratuite</h4>
+						<p>Avec un compte</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-reload"></i>
+						<h4>Commentaires ouverts</h4>
+						<p>Interragissez avec les oeuvres</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-lock"></i>
+						<h4>Payment sécurisé</h4>
+						<p>100% de Sécurité</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-tag"></i>
+						<h4>Abonnement pas chère</h4>
+						<p>Et pleins de bouquins</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<!-- Footer Top -->
+		<div class="footer-top section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer about">
+							<div class="logo">
+								<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="#"></a>
+							</div>
+							<p class="text">Cette plateforme est Concue pour ressencer des livres et des auteurs
+								talentueux
+								<br> et désireux de vendre leurs oeuvres ou de se faire connaitre alors
+								Amusez-vous<span><a href="tel:123456789">+0123
+										456 789</a></span>
+							</p>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer links">
+							<h4>Information</h4>
+							<ul>
+								<li><a href="#">A propos de nous</a></li>
+								<li><a href="#">Termes & Conditions</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Aide</a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer social">
+							<h4>Retrouvez-nous</h4>
+							<!-- Single Widget -->
+							<div class="contact">
+								<ul>
+									<li>NO. 342 - Yaounde ecole polytechnique.</li>
+									<li>Cameroun.</li>
+									<li>info@EbookLsi.com</li>
+									<li>+237 658 86 66 39</li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+							<ul>
+								<li><a href="#"><i class="ti-facebook"></i></a></li>
+								<li><a href="#"><i class="ti-twitter"></i></a></li>
+								<li><a href="#"><i class="ti-flickr"></i></a></li>
+								<li><a href="#"><i class="ti-instagram"></i></a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<div class="left">
+								<p>LSI © 2023 <a href="https://fox-s.netlify.app" target="_blank">FOX</a> -
+									Contactez-nous pour nos services
+									.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="right">
+								<img src="{% static 'images/payments.png' %}" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/colors.js' %}"></script>
+	<script src="{% static 'js/slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl-carousel.js' %}"></script>
+	<script src="{% static 'js/magnific-popup.js' %}"></script>
+	<script src="{% static 'js/waypoints.min.js' %}"></script>
+	<script src="{% static 'js/finalcountdown.min.js' %}"></script>
+	<script src="{% static 'js/nicesellect.js' %}"></script>
+	<script src="{% static 'js/flex-slider.js' %}"></script>
+	<script src="{% static 'js/scrollup.js' %}"></script>
+	<script src="{% static 'js/onepage-nav.min.js' %}"></script>
+	<script src="{% static 'js/easing.js' %}"></script>
+	<script src="https://kit.fontawesome.com/284daa6a85.js" crossorigin="anonymous"></script>
+	<script src="{% static 'js/active.js' %}"></script>
+</body>
+
+</html>

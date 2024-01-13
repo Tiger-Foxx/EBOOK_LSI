@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PROJET PROGRAMMATION-WEB</title>
+
+    <link rel="stylesheet" href="{% static 'login-css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'login-css/feather.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'login-css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'profile-style/style.css' %}" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body class="color-theme-blue">
+    <div class="preloader"></div>
+
+    <div class="main-wrap" style="overflow: scroll">
+        <div class="nav-header bg-transparent shadow-none border-0" style="height: 60px">
+            <div class="nav-top w-100 h-50">
+                <a href="#"
+                    class="header-btn d-none d-lg-block bg-dark fw-500 text-white font-xsss p-3 ms-auto w100 text-center lh-20 rounded-xl"
+                    data-bs-toggle="modal" data-bs-target="#Modallogin">Connexion</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-5 d-none d-xl-block p-0 vh-100 bg-image-cover bg-no-repeat"
+                style="background-image: url({% static 'login-images/login-bg-2.png' %} )"></div>
+
+            <div class="col-xl-7 vh-100 align-items-center d-flex bg-white rounded-3 overflow-hidden">
+                <div class="card shadow-none border-0 ms-auto me-auto login-card">
+                    <div class="card-body rounded-0 text-left">
+                        <h2 class="fw-700 display1-size display2-md-size mb-4"></h2>
+                        <form action="{% url 'register' %}" enctype="multipart/form-data" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group icon-input mb-3">
+                                <i class="bx bxs-user bx-tada"></i>
+                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                    placeholder="VOTRE NOM" name="nom" id="nom" required />
+                            </div>
+                            <div class="form-group icon-input mb-3">
+                                <i class="bx bxs-phone bx-tada"></i>
+                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                    placeholder="telephone" name="telephone" id="telephone" required />
+                            </div>
+                            <div class="form-group icon-input mb-3">
+                                <i class="bx bxl-gmail bx-tada"></i>
+                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                    placeholder="votre email" name="email" id="email" required />
+                            </div>
+                            <div class="form-group icon-input mb-3">
+                                <input type="Password"
+                                    class="style2-input ps-5 form-control text-grey-900 font-xss ls-3"
+                                    placeholder="mot de passe" name="password" id="password1" required />
+                                <i class="bx bxs-lock-alt bx-tada"></i>
+                            </div>
+                            <div class="form-group icon-input mb-1">
+                                <input type="Password"
+                                    class="style2-input ps-5 form-control text-grey-900 font-xss ls-3"
+                                    placeholder="Confirmer mot de passe" id="password2" name="confpassword" required />
+                                <i class="bx bxs-lock-alt bx-tada"></i>
+                            </div>
+                            <div class="form-group icon-input mb-1">
+                                <!-- partial:index.partial.html -->
+                                <div class="profile-pic">
+                                    <label class="-label" for="file">
+                                        <i class="bx bxs-camera bx-tada"></i>
+                                        <span>Photo de Profile</span>
+                                    </label>
+                                    <input id="file" type="file" name="profil" onchange="loadFile(event)" required />
+                                    <img src="{% static 'login-images/profile.png' %}" id="output" width="200" />
+                                </div>
+                            </div>
+                            <!-- partial -->
+                            <div class="form-check text-left mb-3">
+                                <input type="checkbox" class="form-check-input mt-2" id="exampleCheck2" required />
+                                <label class="form-check-label font-xsss text-grey-500" for="exampleCheck2">Accepter nos
+                                    Conditions</label>
+                                <p style="text-align: center;"><label class=" font-xsss "
+                                        style="color: red;font-weight:700" id="message">
+                                    </label></p>
+
+                                <!-- <a href="#" class="fw-600 font-xsss text-grey-700 mt-1 float-right">Forgot your Password?</a> -->
+                            </div>
+                            <button type="submit" id="btnSub" hidden="true"></button>
+                        </form>
+
+                        <div class="col-sm-12 p-0 text-left">
+                            <div class="form-group mb-1">
+                                <a href="#"
+                                    class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0"
+                                    onclick="send_data()">S'enregistrer</a>
+                            </div>
+                            <h6 class="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">
+                                j'ai deja un compte
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#Modallogin"
+                                    class="fw-700 ms-1">Connexion</a>
+                            </h6>
+                        </div>
+
+                        <script>
+                            function sub() {
+                                document.getElementById("btnSub").click();
+                            }
+                            function getCookie(name) {
+                                // Cette fonction renvoie la valeur du cookie nommé name, ou null si le cookie n'existe pas
+                                var cookieValue = null;
+                                if (document.cookie && document.cookie !== "") {
+                                    var cookies = document.cookie.split(";");
+                                    for (var i = 0; i < cookies.length; i++) {
+                                        var cookie = cookies[i].trim();
+                                        // Vérifier si le cookie commence par le nom recherché
+                                        if (cookie.substring(0, name.length + 1) === name + "=") {
+                                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                            break;
+                                        }
+                                    }
+                                }
+                                return cookieValue;
+                            }
+
+                            function send_data() {
+
+                                // Récupérer les données du formulaire
+                                var name = document.getElementById("nom").value;
+                                var password = document.getElementById("password1").value;
+                                var email = document.getElementById("email").value;
+                                var telephone = document.getElementById("telephone").value;
+                                var profil = document.getElementById("file").files[0];
+                                var confpassword = document.getElementById("password2").value;
+
+                                // Créer un objet FormData pour stocker les données du formulaire
+                                var form_data = new FormData();
+                                form_data.append("nom", name);
+                                form_data.append("password", password);
+                                form_data.append("email", email);
+                                form_data.append("telephone", telephone);
+                                form_data.append("profil", profil);
+                                form_data.append("confpassword", confpassword);
+
+                                // Créer un objet XMLHttpRequest pour envoyer la requête Ajax
+                                var xhr = new XMLHttpRequest();
+
+                                xhr.open("POST", "/register/", true); // Remplacer "/singup/" par l'URL de votre vue Django
+                                xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken")); // Ajouter le token CSRF pour la sécurité
+                                xhr.onload = function () {
+                                    // Traiter la réponse du serveur
+                                    if (xhr.status == 200) {
+                                        // La requête a réussi
+                                        var response = JSON.parse(xhr.responseText); // Convertir la réponse en objet JSON
+                                        if (response.success) {
+                                            // L'inscription ou la connexion a réussi
+                                            window.location.href = response.redirect_url; // Rediriger l'utilisateur vers une autre page
+                                        } else {
+                                            // L'inscription ou la connexion a échoué
+                                            document.getElementById("message").innerHTML = response.message; // Afficher le message d'erreur
+                                        }
+                                    } else {
+                                        // La requête a échoué
+                                        document.getElementById("message").innerHTML = "OUPS !! Une Erreur s'est produite "; // Afficher un message générique
+                                    }
+                                };
+                                xhr.send(form_data); // Envoyer les données du formulaire
+                            }
+
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal bottom fade" style="overflow-y: scroll" id="Modallogin" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close text-grey-500"></i>
+                </button>
+                <div class="modal-body p-3 d-flex align-items-center bg-none">
+                    <div class="card shadow-none rounded-0 w-100 p-2 pt-3 border-0">
+                        <div class="card-body rounded-0 text-left p-3">
+                            <h2 class="fw-700 display1-size display2-md-size mb-4">
+                                Connectez <br />Vous
+                            </h2>
+                            <form action="{% url 'login' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-group icon-input mb-3">
+                                    <i class="bx bxs-mail-alt bx-tada"></i>
+                                    <input type="text"
+                                        class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                        placeholder="Votre nom" name="nom" id="nomLogin" required />
+                                </div>
+                                <div class="form-group icon-input mb-1">
+                                    <input type="Password"
+                                        class="style2-input ps-5 form-control text-grey-900 font-xss ls-3"
+                                        placeholder="mot de passe" name="password" id="passwordLogin" required />
+                                    <i class="bx bxs-lock-alt bx-tada"></i>
+                                </div>
+                                <div class="form-check text-left mb-3">
+                                    <input type="checkbox" class="form-check-input mt-2" id="re" name="remember-me" />
+                                    <label class="form-check-label font-xsss text-grey-500" for="re">Se
+                                        souvenir de moi</label>
+                                    <p style="text-align: center;"><label class=" font-xsss "
+                                            style="color: red;font-weight:700" id="messageLogin">
+                                        </label></p>
+                                </div>
+                                <button type="submit" id="btnSub2"></button>
+                            </form>
+
+                            <div class="col-sm-12 p-0 text-left">
+                                <div class="form-group mb-1">
+                                    <a href="#"
+                                        class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0"
+                                        onclick="send_data2()">Connexion</a>
+                                </div>
+
+                                <script>
+                                    function sub2() {
+                                        document.getElementById("btnSub2").click();
+                                    }
+
+                                    function send_data2() {
+
+                                        // Récupérer les données du formulaire
+                                        var name = document.getElementById("nomLogin").value;
+                                        var password = document.getElementById("passwordLogin").value;
+
+
+                                        // Créer un objet FormData pour stocker les données du formulaire
+                                        var form_data = new FormData();
+                                        form_data.append("nom", name);
+                                        form_data.append("password", password);
+                                        form_data.append("remember-me", document.getElementById("re"));
+
+
+                                        // Créer un objet XMLHttpRequest pour envoyer la requête Ajax
+                                        var xhr = new XMLHttpRequest();
+
+                                        xhr.open("POST", "/login/", true); // Remplacer "/singup/" par l'URL de votre vue Django
+                                        xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken")); // Ajouter le token CSRF pour la sécurité
+                                        xhr.onload = function () {
+                                            // Traiter la réponse du serveur
+                                            if (xhr.status == 200) {
+                                                // La requête a réussi
+                                                var response = JSON.parse(xhr.responseText); // Convertir la réponse en objet JSON
+                                                if (response.success) {
+                                                    // L'inscription ou la connexion a réussi
+                                                    window.location.href = response.redirect_url; // Rediriger l'utilisateur vers une autre page
+                                                } else {
+                                                    // L'inscription ou la connexion a échoué
+                                                    document.getElementById("messageLogin").innerHTML = response.message; // Afficher le message d'erreur
+                                                }
+                                            } else {
+                                                // La requête a échoué
+                                                document.getElementById("messageLogin").innerHTML = "OUPS !! Une Erreur s'est produite "; // Afficher un message générique
+                                            }
+                                        };
+                                        xhr.send(form_data); // Envoyer les données du formulaire
+                                    }
+
+                                </script>
+                            </div>
+                            <div class="col-sm-12 p-0 text-center mt-3">
+                                <h6 class="mb-0 d-inline-block bg-white fw-600 font-xsss text-grey-500 mb-4">
+                                    Ou Connectez vous avec vos reseaux
+                                </h6>
+                                <div class="form-group mb-1">
+                                    <a href="#"
+                                        class="form-control text-left style2-input text-white fw-600 bg-facebook border-0 p-0 mb-2"><img
+                                            src="{% static 'login-images/icon-1.png' %}" alt="icon"
+                                            class="ms-2 w40 mb-1 me-5" />
+                                        Avec Google</a>
+                                </div>
+                                <div class="form-group mb-1">
+                                    <a href="#"
+                                        class="form-control text-left style2-input text-white fw-600 bg-twiiter border-0 p-0"><img
+                                            src="{% static 'login-images/icon-3.png' %}" alt="icon"
+                                            class="ms-2 w40 mb-1 me-5" />
+                                        Avec Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'login-js/plugin.js' %}"></script>
+    <script src="{% static 'login-js/scripts.js' %}"></script>
+    <script src="{% static 'profile-script/script.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

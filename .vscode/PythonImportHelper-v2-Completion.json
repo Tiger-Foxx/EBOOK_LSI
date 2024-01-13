@@ -1,0 +1,1532 @@
+[
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "importPath": "Accounts.models",
+        "description": "Accounts.models",
+        "isExtraImport": true,
+        "detail": "Accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Accounts.models",
+        "description": "Accounts.models",
+        "isExtraImport": true,
+        "detail": "Accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "importPath": "Accounts.models",
+        "description": "Accounts.models",
+        "isExtraImport": true,
+        "detail": "Accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "importPath": "Accounts.models",
+        "description": "Accounts.models",
+        "isExtraImport": true,
+        "detail": "Accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "importPath": "xml.parsers.expat",
+        "description": "xml.parsers.expat",
+        "isExtraImport": true,
+        "detail": "xml.parsers.expat",
+        "documentation": {}
+    },
+    {
+        "label": "M",
+        "importPath": "regex",
+        "description": "regex",
+        "isExtraImport": true,
+        "detail": "regex",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileForm",
+        "importPath": "E_BOOK.form",
+        "description": "E_BOOK.form",
+        "isExtraImport": true,
+        "detail": "E_BOOK.form",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "E_BOOK",
+        "description": "E_BOOK",
+        "isExtraImport": true,
+        "detail": "E_BOOK",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "isExtraImport": true,
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Accounts.views",
+        "description": "Accounts.views",
+        "isExtraImport": true,
+        "detail": "Accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "isExtraImport": true,
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "isExtraImport": true,
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "isExtraImport": true,
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "default",
+        "importPath": "email.policy",
+        "description": "email.policy",
+        "isExtraImport": true,
+        "detail": "email.policy",
+        "documentation": {}
+    },
+    {
+        "label": "true",
+        "importPath": "sympy",
+        "description": "sympy",
+        "isExtraImport": true,
+        "detail": "sympy",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "ast",
+        "description": "ast",
+        "isExtraImport": true,
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "E_BOOK_APP.forms",
+        "description": "E_BOOK_APP.forms",
+        "isExtraImport": true,
+        "detail": "E_BOOK_APP.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Avg",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "F",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Accounts.migrations.0001_initial",
+        "description": "Accounts.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Utilisateur',\n            fields=[\n                ('id', models.IntegerField(auto_created=True, editable=False, primary_key=True, serialize=False)),",
+        "detail": "Accounts.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Accounts.migrations.0002_alter_utilisateur_id",
+        "description": "Accounts.migrations.0002_alter_utilisateur_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Accounts', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='utilisateur',\n            name='id',\n            field=models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),\n        ),",
+        "detail": "Accounts.migrations.0002_alter_utilisateur_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Accounts.migrations.0003_alter_utilisateur_is_premium",
+        "description": "Accounts.migrations.0003_alter_utilisateur_is_premium",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Accounts', '0002_alter_utilisateur_id'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='utilisateur',\n            name='is_premium',\n            field=models.BooleanField(default=False),\n        ),",
+        "detail": "Accounts.migrations.0003_alter_utilisateur_is_premium",
+        "documentation": {}
+    },
+    {
+        "label": "AccountsConfig",
+        "kind": 6,
+        "importPath": "Accounts.apps",
+        "description": "Accounts.apps",
+        "peekOfCode": "class AccountsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Accounts'",
+        "detail": "Accounts.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Utilisateur",
+        "kind": 6,
+        "importPath": "Accounts.models",
+        "description": "Accounts.models",
+        "peekOfCode": "class Utilisateur(AbstractUser):\n    email=models.EmailField(unique=True)\n    username = models.CharField(max_length=125,unique=True)\n    password = models.CharField(max_length=300)\n    telephone = models.CharField(max_length=9)\n    profil=models.ImageField(upload_to=\"Photos de Profile\")\n    is_premium=models.BooleanField(null=True,blank=True,default=False)\n    is_premium=models.BooleanField(default=False)\n    def __str__(self):\n        return f\" Utilisateur | nom: {self.username} | email: {self.email}\"",
+        "detail": "Accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "singup",
+        "kind": 2,
+        "importPath": "Accounts.views",
+        "description": "Accounts.views",
+        "peekOfCode": "def singup(request):\n    if request.method == 'POST':\n        # traiter le formulaire\n        passwordConfirm =request.POST.get(\"confpassword\")\n        password =request.POST.get(\"password\")\n        name =request.POST.get(\"nom\")\n        telephone=request.POST.get(\"telephone\")\n        email=request.POST.get(\"email\")\n        profil=request.FILES.get(\"profil\")\n        Remember =request.POST.get(\"remember-me\")",
+        "detail": "Accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "Logout",
+        "kind": 2,
+        "importPath": "Accounts.views",
+        "description": "Accounts.views",
+        "peekOfCode": "def Logout(request):\n    logout(request)\n    return render(request,\"Accounts/register.html\")\ndef login_user(request):\n    if request.method == 'POST':\n        # conecter l'utilisateur\n        name = request.POST.get(\"nom\")\n        print(name + \"est le nom\")\n        password =request.POST.get(\"password\")\n        Remember =request.POST.get(\"remember-me\")",
+        "detail": "Accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "kind": 2,
+        "importPath": "Accounts.views",
+        "description": "Accounts.views",
+        "peekOfCode": "def login_user(request):\n    if request.method == 'POST':\n        # conecter l'utilisateur\n        name = request.POST.get(\"nom\")\n        print(name + \"est le nom\")\n        password =request.POST.get(\"password\")\n        Remember =request.POST.get(\"remember-me\")\n        print(\"le mdp est : \"+password)\n        user=authenticate(username=name, password=password)\n        if user:",
+        "detail": "Accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "profileUser",
+        "kind": 2,
+        "importPath": "Accounts.views",
+        "description": "Accounts.views",
+        "peekOfCode": "def profileUser(request):\n    is_valid=False\n    if request.method==\"POST\":\n        utilisateur=get_object_or_404(Utilisateur,id=request.user.id)\n        form = ProfileForm(request.POST,request.FILES,instance=utilisateur)\n        if form.is_valid():\n            form.save()\n            is_valid=True\n            return redirect(\"index\")\n        else:",
+        "detail": "Accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "E_BOOK.asgi",
+        "description": "E_BOOK.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "E_BOOK.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileForm",
+        "kind": 6,
+        "importPath": "E_BOOK.form",
+        "description": "E_BOOK.form",
+        "peekOfCode": "class ProfileForm(forms.ModelForm):\n    class Meta:\n        model = Utilisateur\n        fields=['username','email','telephone','profil']",
+        "detail": "E_BOOK.form",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nAUTH_USER_MODEL=\"Accounts.Utilisateur\"\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-z8qk24e(ze(v!v+^l)!e7l+@-e$n_)ba17+d(mr0qrk=w302zv'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-z8qk24e(ze(v!v+^l)!e7l+@-e$n_)ba17+d(mr0qrk=w302zv'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'E_BOOK_APP',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'E_BOOK_APP',\n    'Accounts'\n]",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nX_FRAME_OPTIONS = 'SAMEORIGIN' #POUR QUE LE DETOURNEMENT DE PCLICK SOIT PERMIT ET LES PDF S\"AFFICHENT",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "X_FRAME_OPTIONS",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "X_FRAME_OPTIONS = 'SAMEORIGIN' #POUR QUE LE DETOURNEMENT DE PCLICK SOIT PERMIT ET LES PDF S\"AFFICHENT\nROOT_URLCONF = 'E_BOOK.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [str(BASE_DIR)+\"/temp\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "ROOT_URLCONF = 'E_BOOK.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [str(BASE_DIR)+\"/temp\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [str(BASE_DIR)+\"/temp\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'E_BOOK.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'fr-FR'\nTIME_ZONE = 'Africa/Douala'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "TIME_ZONE = 'Africa/Douala'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_URL= \"/media/\"",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_URL= \"/media/\"\nSTATICFILES_ROOT= os.path.join(BASE_DIR,'staticfiles')",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_URL= \"/media/\"\nSTATICFILES_ROOT= os.path.join(BASE_DIR,'staticfiles')\nMEDIA_ROOT= BASE_DIR/\"media/\"",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "STATIC_ROOT = str(BASE_DIR /'E_BOOK_APP/static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_URL= \"/media/\"\nSTATICFILES_ROOT= os.path.join(BASE_DIR,'staticfiles')\nMEDIA_ROOT= BASE_DIR/\"media/\"",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "E_BOOK.settings",
+        "description": "E_BOOK.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_URL= \"/media/\"\nSTATICFILES_ROOT= os.path.join(BASE_DIR,'staticfiles')\nMEDIA_ROOT= BASE_DIR/\"media/\"",
+        "detail": "E_BOOK.settings",
+        "documentation": {}
+    },
+    {
+        "label": "handler404",
+        "kind": 5,
+        "importPath": "E_BOOK.urls",
+        "description": "E_BOOK.urls",
+        "peekOfCode": "handler404 = 'E_BOOK_APP.views.error_404_view'\nhandler500 = 'E_BOOK_APP.views.error_500_view'\nurlpatterns = [\n    path('',index,name='index'),\n    path('admin/', admin.site.urls),\n    path('publier',publier,name='publier'),\n    path('Livre/<str:id>',Livre_detail,name='Livre_detail'), # type: ignore\n    path('rechercher/',rechercher,name='rechercher'),\n    path('register/',singup,name='register'),\n    path('logout/',Logout,name='logout'),",
+        "detail": "E_BOOK.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler500",
+        "kind": 5,
+        "importPath": "E_BOOK.urls",
+        "description": "E_BOOK.urls",
+        "peekOfCode": "handler500 = 'E_BOOK_APP.views.error_500_view'\nurlpatterns = [\n    path('',index,name='index'),\n    path('admin/', admin.site.urls),\n    path('publier',publier,name='publier'),\n    path('Livre/<str:id>',Livre_detail,name='Livre_detail'), # type: ignore\n    path('rechercher/',rechercher,name='rechercher'),\n    path('register/',singup,name='register'),\n    path('logout/',Logout,name='logout'),\n    path('login/',login_user,name='login'),",
+        "detail": "E_BOOK.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "E_BOOK.urls",
+        "description": "E_BOOK.urls",
+        "peekOfCode": "urlpatterns = [\n    path('',index,name='index'),\n    path('admin/', admin.site.urls),\n    path('publier',publier,name='publier'),\n    path('Livre/<str:id>',Livre_detail,name='Livre_detail'), # type: ignore\n    path('rechercher/',rechercher,name='rechercher'),\n    path('register/',singup,name='register'),\n    path('logout/',Logout,name='logout'),\n    path('login/',login_user,name='login'),\n    path('commenter/<str:id>',Commenter,name='commenter'), # type: ignore",
+        "detail": "E_BOOK.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "E_BOOK.wsgi",
+        "description": "E_BOOK.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "E_BOOK.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0001_initial",
+        "description": "E_BOOK_APP.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Livre',\n            fields=[\n                ('date', models.DateField(auto_created=True, auto_now=True)),\n                ('id', models.IntegerField(auto_created=True, editable=False, primary_key=True, serialize=False, unique=True)),",
+        "detail": "E_BOOK_APP.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0002_rename_image_livre_image1_livre_image2",
+        "description": "E_BOOK_APP.migrations.0002_rename_image_livre_image1_livre_image2",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='livre',\n            old_name='image',\n            new_name='image1',\n        ),",
+        "detail": "E_BOOK_APP.migrations.0002_rename_image_livre_image1_livre_image2",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0003_livre_pdf_livre_prix_alter_livre_categorie_and_more",
+        "description": "E_BOOK_APP.migrations.0003_livre_pdf_livre_prix_alter_livre_categorie_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0002_rename_image_livre_image1_livre_image2'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='livre',\n            name='pdf',\n            field=models.FileField(blank=True, null=True, upload_to=''),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0003_livre_pdf_livre_prix_alter_livre_categorie_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0004_categorie_remove_livre_nb_lectures_and_more",
+        "description": "E_BOOK_APP.migrations.0004_categorie_remove_livre_nb_lectures_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0003_livre_pdf_livre_prix_alter_livre_categorie_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='categorie',\n            fields=[\n                ('nom_categorie', models.CharField(max_length=200, primary_key=True, serialize=False)),\n            ],",
+        "detail": "E_BOOK_APP.migrations.0004_categorie_remove_livre_nb_lectures_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0005_alter_livre_prix",
+        "description": "E_BOOK_APP.migrations.0005_alter_livre_prix",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0004_categorie_remove_livre_nb_lectures_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='livre',\n            name='prix',\n            field=models.FloatField(blank=True, default=0, null=True),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0005_alter_livre_prix",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0006_alter_livre_image1",
+        "description": "E_BOOK_APP.migrations.0006_alter_livre_image1",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0005_alter_livre_prix'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='livre',\n            name='image1',\n            field=models.ImageField(upload_to='Images_Livres'),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0006_alter_livre_image1",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0007_alter_livre_pdf",
+        "description": "E_BOOK_APP.migrations.0007_alter_livre_pdf",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0006_alter_livre_image1'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='livre',\n            name='pdf',\n            field=models.FileField(upload_to='livres_pdf'),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0007_alter_livre_pdf",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0008_alter_livre_date",
+        "description": "E_BOOK_APP.migrations.0008_alter_livre_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0007_alter_livre_pdf'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='livre',\n            name='date',\n            field=models.DateTimeField(auto_created=True, auto_now=True),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0008_alter_livre_date",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0009_livre_admincom",
+        "description": "E_BOOK_APP.migrations.0009_livre_admincom",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0008_alter_livre_date'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='livre',\n            name='AdminCom',\n            field=models.TextField(blank=True, default=\"AUCUN COMMENTAIRE DE L'ADMINISTRATEUR POUR LE MOMENT\", null=True),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0009_livre_admincom",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0010_remove_livre_id_user_livre_aut_user",
+        "description": "E_BOOK_APP.migrations.0010_remove_livre_id_user_livre_aut_user",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('E_BOOK_APP', '0009_livre_admincom'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='livre',\n            name='id_User',\n        ),",
+        "detail": "E_BOOK_APP.migrations.0010_remove_livre_id_user_livre_aut_user",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0011_commentaire",
+        "description": "E_BOOK_APP.migrations.0011_commentaire",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0010_remove_livre_id_user_livre_aut_user'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Commentaire',\n            fields=[\n                ('date', models.DateTimeField(auto_created=True, auto_now=True)),\n                ('id', models.IntegerField(auto_created=True, editable=False, primary_key=True, serialize=False, unique=True)),",
+        "detail": "E_BOOK_APP.migrations.0011_commentaire",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0012_rename_livre_id_commentaire_id_livre",
+        "description": "E_BOOK_APP.migrations.0012_rename_livre_id_commentaire_id_livre",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0011_commentaire'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='commentaire',\n            old_name='livre_id',\n            new_name='id_livre',\n        ),",
+        "detail": "E_BOOK_APP.migrations.0012_rename_livre_id_commentaire_id_livre",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0013_remove_commentaire_profil_commentaire_posteur",
+        "description": "E_BOOK_APP.migrations.0013_remove_commentaire_profil_commentaire_posteur",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('E_BOOK_APP', '0012_rename_livre_id_commentaire_id_livre'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='commentaire',\n            name='profil',\n        ),",
+        "detail": "E_BOOK_APP.migrations.0013_remove_commentaire_profil_commentaire_posteur",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0014_lecture",
+        "description": "E_BOOK_APP.migrations.0014_lecture",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('E_BOOK_APP', '0013_remove_commentaire_profil_commentaire_posteur'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Lecture',\n            fields=[\n                ('date', models.DateTimeField(auto_created=True)),",
+        "detail": "E_BOOK_APP.migrations.0014_lecture",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0015_alter_lecture_date",
+        "description": "E_BOOK_APP.migrations.0015_alter_lecture_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0014_lecture'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='lecture',\n            name='date',\n            field=models.DateTimeField(auto_created=True, blank=True, null=True),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0015_alter_lecture_date",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0016_livre_is_premium",
+        "description": "E_BOOK_APP.migrations.0016_livre_is_premium",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0015_alter_lecture_date'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='livre',\n            name='is_premium',\n            field=models.BooleanField(default=False),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0016_livre_is_premium",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0017_alter_lecture_date_alter_livre_date",
+        "description": "E_BOOK_APP.migrations.0017_alter_lecture_date_alter_livre_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0016_livre_is_premium'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='lecture',\n            name='date',\n            field=models.DateTimeField(auto_created=True, auto_now=True, null=True),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0017_alter_lecture_date_alter_livre_date",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.migrations.0018_alter_livre_date",
+        "description": "E_BOOK_APP.migrations.0018_alter_livre_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('E_BOOK_APP', '0017_alter_lecture_date_alter_livre_date'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='livre',\n            name='date',\n            field=models.DateTimeField(auto_created=True, default=datetime.datetime(2023, 12, 28, 7, 26, 46, 186163)),\n        ),",
+        "detail": "E_BOOK_APP.migrations.0018_alter_livre_date",
+        "documentation": {}
+    },
+    {
+        "label": "EBookAppConfig",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.apps",
+        "description": "E_BOOK_APP.apps",
+        "peekOfCode": "class EBookAppConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'E_BOOK_APP'",
+        "detail": "E_BOOK_APP.apps",
+        "documentation": {}
+    },
+    {
+        "label": "LivreForm",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.forms",
+        "description": "E_BOOK_APP.forms",
+        "peekOfCode": "class LivreForm(forms.ModelForm):\n    class Meta:\n        model = Livre\n        fields = ['Titre','categorie', 'Auteur','Aut_User','image1','image2','prix','Aut_is_User','description','pdf']\nclass CommentForm(forms.ModelForm):\n    class Meta:\n        model = Commentaire\n        fields=['nom','description','posteur','id_livre']",
+        "detail": "E_BOOK_APP.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CommentForm",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.forms",
+        "description": "E_BOOK_APP.forms",
+        "peekOfCode": "class CommentForm(forms.ModelForm):\n    class Meta:\n        model = Commentaire\n        fields=['nom','description','posteur','id_livre']",
+        "detail": "E_BOOK_APP.forms",
+        "documentation": {}
+    },
+    {
+        "label": "categorie",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "peekOfCode": "class categorie(models.Model):\n    nom_categorie=models.CharField(max_length=200,primary_key=True)\n    def __str__(self):\n        return self.nom_categorie\nclass Commentaire(models.Model):\n    id=models.IntegerField(unique=True,auto_created=True,editable=False,primary_key=True)\n    id_livre=models.IntegerField()\n    nom=models.CharField(max_length=200)\n    posteur=models.ForeignKey(Utilisateur,on_delete=models.CASCADE,null=True,blank=True)\n    date=models.DateTimeField(auto_now=True,auto_created=True)",
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "Commentaire",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "peekOfCode": "class Commentaire(models.Model):\n    id=models.IntegerField(unique=True,auto_created=True,editable=False,primary_key=True)\n    id_livre=models.IntegerField()\n    nom=models.CharField(max_length=200)\n    posteur=models.ForeignKey(Utilisateur,on_delete=models.CASCADE,null=True,blank=True)\n    date=models.DateTimeField(auto_now=True,auto_created=True)\n    description=models.TextField(blank=True, null=True)\nclass Livre(models.Model):\n    id=models.IntegerField(unique=True,auto_created=True,editable=False,primary_key=True)\n    is_premium=models.BooleanField(default=False)",
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "Livre",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "peekOfCode": "class Livre(models.Model):\n    id=models.IntegerField(unique=True,auto_created=True,editable=False,primary_key=True)\n    is_premium=models.BooleanField(default=False)\n    en_vente=models.BooleanField(default=False)\n    AdminCom=models.TextField(default=\"AUCUN COMMENTAIRE DE L'ADMINISTRATEUR POUR LE MOMENT\",blank=True,null=True)\n    recommande=models.BooleanField(default=False)\n    categorie=models.ForeignKey(categorie,on_delete=models.CASCADE)\n    Titre= models.CharField(max_length=228)\n    Auteur=models.CharField(max_length=128)\n    Aut_User=models.ForeignKey(Utilisateur,on_delete=models.CASCADE,null=True,blank=True)",
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "Lecture",
+        "kind": 6,
+        "importPath": "E_BOOK_APP.models",
+        "description": "E_BOOK_APP.models",
+        "peekOfCode": "class Lecture(models.Model):\n    id=models.IntegerField(unique=True,auto_created=True,editable=False,primary_key=True)\n    date=models.DateTimeField(auto_created=True,null=True,blank=True,auto_now=True)\n    utilisateur=models.ForeignKey(Utilisateur,on_delete=models.CASCADE,null=True,blank=True)\n    livre=models.ForeignKey(Livre,on_delete=models.CASCADE,null=True,blank=True)\n    def __str__(self):\n        return f\"Lecture de {self.livre} par {self.utilisateur} \"",
+        "detail": "E_BOOK_APP.models",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def index(request):\n    is_index=True\n    categories=categorie.objects.all()\n    Auteurs_pop=[]\n    moyenne=0\n    Tous_Les_Livres=Livre.objects.all()\n    nb=Tous_Les_Livres.count()\n    for livre in Tous_Les_Livres:\n        moyenne+=livre.score/nb\n    print(moyenne)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "publier",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def publier(request):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    is_valid=False\n    post=False\n    if request.method == 'POST':\n        post=True\n        form = LivreForm(request.POST,request.FILES)\n        if form.is_valid():",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "incrementer_score",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def incrementer_score(id):\n    livre = Livre.objects.get(id=id)\n    livre.score = F('score') + 1\n    livre.save()\ndef Livre_detail(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    commentaires=Commentaire.objects.filter(id_livre=id)\n    categories=categorie.objects.all()\n    # Obtenir la date d'aujourd'hui",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "Livre_detail",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def Livre_detail(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    commentaires=Commentaire.objects.filter(id_livre=id)\n    categories=categorie.objects.all()\n    # Obtenir la date d'aujourd'hui\n    aujourdhui = date.today()\n    # Définir un délai de 3 jours pour considérer un livre comme récent\n    delai = timedelta(days=3)\n    # Filtrer les livres dont la date est supérieure ou égale à aujourd'hui - délai",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "rechercher",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def rechercher(request):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    sujet=request.GET.get(\"search\")\n    categorieSearch=request.GET.get(\"categorie\")\n    Livres_recherche = Livre.objects.filter(Q(categorie__nom_categorie__icontains=categorieSearch) & (Q(Titre__icontains=sujet) | Q(Auteur__icontains=sujet))) \n    return render(request,'E_BOOK_APP/Resultat.html',{\"categories\":categories,\"lectures\":MesLectures,\"is_index\":is_index,\"Livres_recherche\":Livres_recherche,\"sujet\":sujet,\"categorie\":categorieSearch})\ndef Commenter(request , id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "Commenter",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def Commenter(request , id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    commentaires=Commentaire.objects.filter(id_livre=id)\n    categories=categorie.objects.all()\n    # Obtenir la date d'aujourd'hui\n    aujourdhui = date.today()\n    # Définir un délai de 3 jours pour considérer un livre comme récent\n    delai = timedelta(days=3)\n    # Filtrer les livres dont la date est supérieure ou égale à aujourd'hui - délai",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "MesLivres",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def MesLivres(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    MesLivres=Livre.objects.filter(Aut_User__id=id).order_by('date')\n    #MesLivres=Livre.objects.all()\n    return render(request, 'E_BOOK_APP/MesLivres.html', {\"categories\":categories,\"lectures\":MesLectures,\"is_index\":is_index,\"MesLivres\":MesLivres})\ndef MesLectures(request,id):\n    mesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "MesLectures",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def MesLectures(request,id):\n    mesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    MesLectures=Lecture.objects.filter(utilisateur__id=id).order_by('date')\n    #MesLivres=Livre.objects.all()\n    return render(request, 'E_BOOK_APP/MesLectures.html', {\"categories\":categories,\"lectures\":mesLectures,\"is_index\":is_index,\"MesLectures\":MesLectures})\ndef AjoutLectures(request,id):\n    lecture=Lecture(utilisateur=request.user,livre=get_object_or_404(Livre,id=id))\n    lecture.save()",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "AjoutLectures",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def AjoutLectures(request,id):\n    lecture=Lecture(utilisateur=request.user,livre=get_object_or_404(Livre,id=id))\n    lecture.save()\ndef SupprimerLecture(request , id):\n    lecture=get_object_or_404(Lecture,id=id)\n    if lecture.utilisateur == request.user:\n      lecture.delete()\n      return redirect(\"MesLectures\",request.user.id) \n    else:\n      return render(request,\"E_BOOK_APP/404.html\")",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "SupprimerLecture",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def SupprimerLecture(request , id):\n    lecture=get_object_or_404(Lecture,id=id)\n    if lecture.utilisateur == request.user:\n      lecture.delete()\n      return redirect(\"MesLectures\",request.user.id) \n    else:\n      return render(request,\"E_BOOK_APP/404.html\")\ndef SupprimerLivre(request, id):\n    livre=get_object_or_404(Livre,id=id)\n    if livre.Aut_User == request.user:",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "SupprimerLivre",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def SupprimerLivre(request, id):\n    livre=get_object_or_404(Livre,id=id)\n    if livre.Aut_User == request.user:\n      livre.delete()\n      return redirect(\"MesLivress\",request.user.id) \n    else:\n        return render(request,\"E_BOOK_APP/404.html\")\ndef LivresAuteur(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "LivresAuteur",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def LivresAuteur(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    Auteur=get_object_or_404(Utilisateur,id=id)\n    Livres_recherche = Livre.objects.filter(Aut_User__id = int(id)) \n    return render(request,'E_BOOK_APP/Auteur.html',{\"categories\":categories,\"lectures\":MesLectures,\"is_index\":is_index,\"Livres_Auteur\":Livres_recherche,\"categorie\":categories,\"Auteur\":Auteur})\ndef checkout(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    livre=get_object_or_404(Livre,id=id)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "checkout",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def checkout(request,id):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    livre=get_object_or_404(Livre,id=id)\n    return render(request,\"E_BOOK_APP/checkout.html\",{\"livre\":livre})\ndef premium(request):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    return render(request,\"E_BOOK_APP/premium.html\")\ndef error_404_view(request, exception):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=404)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "premium",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def premium(request):\n    MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    return render(request,\"E_BOOK_APP/premium.html\")\ndef error_404_view(request, exception):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=404)\ndef error_500_view(request):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=500)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "error_404_view",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def error_404_view(request, exception):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=404)\ndef error_500_view(request):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=500)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "error_500_view",
+        "kind": 2,
+        "importPath": "E_BOOK_APP.views",
+        "description": "E_BOOK_APP.views",
+        "peekOfCode": "def error_500_view(request):\n    # Votre logique pour gérer l'erreur 404\n    return render(request, '404.html', {}, status=500)",
+        "detail": "E_BOOK_APP.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'E_BOOK.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

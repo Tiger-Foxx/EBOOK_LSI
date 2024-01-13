@@ -1,0 +1,228 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!---AUTHOR : DONFACK PASCAL-->
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="bread-inner">
+					<ul class="bread-list">
+						<li><a href="{% url 'index' %}">Acceuil<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="#">lire</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+<!-- Start Small Banner  -->
+<div class="section-title" style="margin-top: 25px; margin-bottom: 15px">
+	<h2 style="text-transform: uppercase;"> {{livre.Titre}}</h2>
+</div>
+<section class="blog-single section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12">
+				<div class="blog-single-main">
+					<div class="row">
+						<div class="col-12">
+							<div class="image">
+								<img src="{{livre.image1.url}}" alt="#" style="width: 400px;height:auto">
+							</div>
+							<div class="blog-detail">
+								<h2 class="blog-title" style="text-transform:uppercase">{{livre.titre}}</h2>
+								<div class="blog-meta">
+									{% if livre.Aut_is_User %}
+									<span class="author"><a href="{% url 'LivresAuteur' livre.Aut_User.id %}"><i
+												class="fa fa-user"></i>Par {{livre.Aut_User.username}}</a><a href="#"><i
+												class="fa fa-calendar"></i> publie le {{livre.date}}</a><a href="#"><i
+												class="fa fa-comments"></i>Commentaires ({{nb_com}})</a></span>
+									{% else %}
+									<span class="author"><a href="#"><i class="fa fa-user"></i>Par :
+											{{livre.Auteur}}</a><a href="#"><i class="fa fa-calendar"></i>Publié le
+											{{livre.date}}</a><a href="#"><i class="fa fa-comments"></i>Commentaires
+											({{nb_com}})</a></span>
+									{% endif %}
+
+
+								</div>
+								<div class="content">
+									<p>DESCRIPTION : {{livre.description}}</p>
+									<blockquote> <i class="fa fa-quote-left"></i>ADMIN : {{livre.AdminCom}}</blockquote>
+
+								</div>
+							</div>
+
+
+
+						</div>
+						<div class="col-">
+							{% if user.is_authenticated %}
+							{% if livre.is_premium %}
+							{% if user.is_premium %}
+							<embed src="{{livre.pdf.url}}" title="{{livre.Titre}}">
+
+
+							{% else %}
+							<div class="section-title" style="margin-top: 25px; margin-bottom: 15px">
+								<h2 style="text-transform: uppercase;"> VEUILLIEZ VOUS PASSER PREMIUM <a
+										href="{% url 'premium' %}" style="color: red;">ICI</a> POUR LIRE </h2>
+							</div>
+							{% endif %}
+
+							{% else %}
+							{% if user.is_premium %}
+							<embed src="{{livre.pdf.url}}" title="{{livre.Titre}}">
+							{% else %}
+							<embed src="{{livre.pdf.url}}#toolbar=0" title="{{livre.Titre}}">
+							{% endif %}
+
+							{% endif %}
+							{% else %}
+							<!-- Start Small Banner  -->
+							<div class="section-title" style="margin-top: 25px; margin-bottom: 15px">
+								<h2 style="text-transform: uppercase;"> VEUILLIEZ VOUS <a href="{% url 'login' %}"
+										style="color: red;">CONNECTER</a> OU <a href="{% url 'register' %}"
+										style="color: red;">CREER UN
+										COMPTE</a> POUR LIRE </h2>
+							</div>
+							{% endif %}
+
+
+
+						</div>
+						<div class="col-12">
+							<div class="comments">
+								<h3 class="comment-title"> {{nb_com}} Commentaires</h3>
+
+								{% for commentaire in Commentaires %}
+								<!-- Single Comment -->
+								<div class="single-comment">
+									<a href="{% url 'LivresAuteur' commentaire.posteur.id %}"><img
+											src="{{commentaire.posteur.profil.url}}" alt="#"></a>
+									<div class="content">
+										<h4>{{commentaire.nom}} <span>Le {{commentaire.date}}</span></h4>
+										<p>{{commentaire.description}}</p>
+										<div class="button">
+											<a href="#" class="btn"><i class="fa fa-reply"
+													aria-hidden="true"></i>Reply</a>
+										</div>
+									</div>
+								</div>
+								<!-- End Single Comment -->
+								{% endfor %}
+
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="reply">
+								<div class="reply-head">
+									<h2 class="reply-title">Laisser un commentaire</h2>
+									<!-- Comment Form -->
+									<form class="form" action="{% url 'commenter' livre.id %}" method="post">
+										{% csrf_token %}
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-12">
+												<div class="form-group">
+													<label>Votre Nom<span>*</span></label>
+													<input type="text" name="nom" placeholder="" required="required"
+														value="{{user.username}}">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-group">
+													<label>Votre Commentaire<span>*</span></label>
+													<textarea name="description" placeholder=" votre commentaire ici..."
+														required></textarea>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="form-group button">
+													<button type="submit" class="btn">Poster le commentaire</button>
+												</div>
+											</div>
+										</div>
+										<div class="cache" style="display : none">
+											<input type="text" name="id_livre" value="{{livre.id}}">
+											<input type="text" name="posteur" value="{{user.id}}">
+										</div>
+
+									</form>
+									<!-- End Comment Form -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-12">
+				<div class="main-sidebar">
+					<!-- Single Widget -->
+					<div class="single-widget search">
+						<div class="form">
+							<form action="{% url 'rechercher' %}" method="get">
+								<input type="text" name="search" placeholder="Recherchez un titre ...">
+								<input type="text" name="categorie" hidden="true">
+								<button type="submit" class="button"><i class="fa fa-search"></i></button>
+
+							</form>
+
+						</div>
+					</div>
+					<!--/ End Single Widget -->
+					<!-- Single Widget -->
+					<div class="single-widget category">
+						<h3 class="title">Informations</h3>
+						<ul class="categor-list">
+							<li><a href="#">Titre : {{livre.Titre}}</a></li>
+							{% if livre.Aut_is_User %}
+							<li><a href="{% url 'LivresAuteur' livre.Aut_User.id %}">Auteur
+									:{{livre.Aut_User.username}}</a></li>
+							{% else %}
+							<li><a href="#">Auteur :{{livre.Auteur}}</a></li>
+
+							<li><a href="{% url 'LivresAuteur' livre.Aut_User.id %}">Publie Par
+									:{{livre.Aut_User.username}}</a></li>
+
+							{% endif %}
+							<li><a href="#">Genre : {{livre.categorie.nom_categorie}}</a></li>
+							<li><a href="#">Score : {{livre.score}}</a></li>
+						</ul>
+					</div>
+					<!--/ End Single Widget -->
+
+					<!-- Single Widget -->
+					<div class="single-widget recent-post">
+						<h3 class="title">Recents</h3>
+						{% for livre in Livres_recents %}
+						<!-- Single Post -->
+						<div class="single-post">
+							<div class="image">
+								<img src="{{livre.image1.url}}" alt="{{livre.Titre}}">
+							</div>
+							<div class="content">
+								<h5><a href="{{livre.get_absolute_url}}">{{livre.Titre}}</a></h5>
+								<ul class="comment">
+									<li><i class="fa fa-calendar" aria-hidden="true"></i>le {{livre.date}}</li>
+									<li><i class="fa fa-commenting-o" aria-hidden="true"></i>{{livre.score}}</li>
+								</ul>
+							</div>
+						</div>
+						<!-- End Single Post -->
+						{% endfor %}
+					</div>
+					<!--/ End Single Widget -->
+					<!-- Single Widget -->
+					<!--/ End Single Widget -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}
