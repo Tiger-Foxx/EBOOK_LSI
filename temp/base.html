@@ -158,8 +158,8 @@
 										class="total-count" id="countLec">{{ lectures|length }}</span></a>
 								<div class="shopping-item">
 									<div class="dropdown-cart-header">
-										<span>{{ lectures|length }} Lectures</span>
-										<a href="{% url 'MesLectures' user.id %}">Voir les Lectures</a>
+										<span>{{ lectures|length }} Nouvelles Lectures</span>
+										<a href="{% url 'MesLectures' user.id %}">Voir Tout</a>
 									</div>
 									<ul class="shopping-list">
 
@@ -183,7 +183,7 @@
 										<div class="total">
 											<span>Total</span>
 											<span class="total-amount" id="countLec2">{{ lectures|length }}
-												lectures</span>
+												Nouvelles Lectures</span>
 										</div>
 										{% if not user.is_premium %}
 										<a href="{% url 'premium' %}" class="btn animate">Passer Premium</a>
@@ -388,7 +388,7 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="{% static 'profile-script/script.js' %}"></script>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
 	<script src="{% static 'js/jquery-ui.min.js' %}"></script>

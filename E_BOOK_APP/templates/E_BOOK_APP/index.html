@@ -279,7 +279,8 @@
                 <div class="button-head">
                   <div class="product-action">
                     <a title="Quick View" href="{{livre.get_absolute_url}}"><i class="ti-eye"></i><span>Lire</span></a>
-                    <a title="Compare" href="{% url 'AjoutLectures' livre.id %}"><i class="ti-plus"></i><span>Ajouter
+                    <a title="Compare" href="javascript:void(0);" onclick="ajouterAuxLectures({{livre.id}})"><i
+                        class="ti-plus"></i><span>Ajouter
                         aux lectures</span></a>
                   </div>
                   <div class="product-action-2">

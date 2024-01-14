@@ -44,10 +44,22 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
+
+
                                 <div class="form-group">
-                                    <label>Photo<span>*</span></label>
-                                    <input type="file" name="profil" accept="image/png, image/jpeg,image/bmp"
-                                        value="{{user.profil.url}}">
+                                    <label>Photo <span>*</span></label>
+
+                                    <input name="profil" type="file" hidden="true"
+                                        accept="image/png,image/jpeg,image/bmp" placeholder="image 1"
+                                        onchange="loadFile2(event,'file1')" id="f1" value="{{user.profil.url}}"
+                                        required>
+
+                                    <div class="button" style="margin-bottom: 10px;">
+                                        <a href="#" onclick="document.getElementById('f1').click()" class="btn"
+                                            style="color: white;">Choisir Une Image <i class="fa fa-image"></i></a>
+                                    </div>
+                                    <img src="{% static 'login-images/profile.png' %}" id="file1" height="30"
+                                        alt="image1" style="border-radius: 10px;">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">

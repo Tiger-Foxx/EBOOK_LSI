@@ -38,8 +38,7 @@ def index(request):
      "is_index":is_index,
      "lectures":MesLectures,
      "Livres_Populaires":populaires})
-    
-    
+        
 def publier(request):
     MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
     global is_index
@@ -60,8 +59,6 @@ def publier(request):
     else:
         form = LivreForm()
     return render(request, 'E_BOOK_APP/publier.html', {'form': form,'is_valid':is_valid,"categories":categories,"lectures":MesLectures,"is_index":is_index,'post':post})
-        
-
 
 def incrementer_score(id):
     livre = Livre.objects.get(id=id)
@@ -82,6 +79,7 @@ def Livre_detail(request,id):
     Livres_recents = Livre.objects.filter(date__gte=aujourdhui - delai)
     livre=get_object_or_404(Livre,id=id)
     nb_com=commentaires.count()
+    AjoutLectures(request,id)
     if request.method == 'POST':
         form = CommentForm(request.POST,request.FILES)
         
@@ -96,8 +94,6 @@ def Livre_detail(request,id):
         form = LivreForm()
         incrementer_score(id)
     return render(request, 'E_BOOK_APP/detail-read.html', {"categories":categories,"lectures":MesLectures,"is_index":is_index,"livre":livre,"Livres_recents":Livres_recents,"Commentaires":commentaires,"nb_com":nb_com})
-
-
 
 def rechercher(request):
     MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
@@ -137,7 +133,6 @@ def Commenter(request , id):
         form = LivreForm()
     return render(request, 'E_BOOK_APP/detail-read.html', {"categories":categories,"lectures":MesLectures,"is_index":is_index,"livre":livre,"Livres_recents":Livres_recents,"Commentaires":commentaires,"nb_com":nb_com})
 
-
 def MesLivres(request,id):
     MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
     global is_index
@@ -150,16 +145,24 @@ def MesLectures(request,id):
     mesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
     global is_index
     categories=categorie.objects.all()
-    MesLectures=Lecture.objects.filter(utilisateur__id=id).order_by('date')
+    MesLectures=Lecture.objects.filter(utilisateur__id=id).order_by('-date')
     #MesLivres=Livre.objects.all()
     return render(request, 'E_BOOK_APP/MesLectures.html', {"categories":categories,"lectures":mesLectures,"is_index":is_index,"MesLectures":MesLectures})
 
 def AjoutLectures(request,id):
     
-    lecture=Lecture(utilisateur=request.user,livre=get_object_or_404(Livre,id=id))
-    lecture.save()
-      
+    # Recherche d'une lecture existante ou création d'une nouvelle
+    lecture, created = Lecture.objects.get_or_create(
+        utilisateur=request.user,
+        livre_id=id,
+        defaults={'date': datetime.now()} # type: ignore
+    )
 
+    # Si la lecture existe déjà, on met à jour la date
+    if not created:
+        lecture.date = datetime.now() # type: ignore
+        lecture.save()
+      
 def SupprimerLecture(request , id):
     lecture=get_object_or_404(Lecture,id=id)
     if lecture.utilisateur == request.user:
@@ -176,8 +179,6 @@ def SupprimerLivre(request, id):
     else:
         return render(request,"E_BOOK_APP/404.html")
     
-    
-
 def LivresAuteur(request,id):
     MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
     global is_index
@@ -195,7 +196,6 @@ def checkout(request,id):
 def premium(request):
     MesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]
     return render(request,"E_BOOK_APP/premium.html")
-
 
 def error_404_view(request, exception):
     # Votre logique pour gérer l'erreur 404

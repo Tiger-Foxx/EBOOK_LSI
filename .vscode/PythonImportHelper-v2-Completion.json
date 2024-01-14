@@ -1444,7 +1444,7 @@
         "kind": 2,
         "importPath": "E_BOOK_APP.views",
         "description": "E_BOOK_APP.views",
-        "peekOfCode": "def MesLectures(request,id):\n    mesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    MesLectures=Lecture.objects.filter(utilisateur__id=id).order_by('date')\n    #MesLivres=Livre.objects.all()\n    return render(request, 'E_BOOK_APP/MesLectures.html', {\"categories\":categories,\"lectures\":mesLectures,\"is_index\":is_index,\"MesLectures\":MesLectures})\ndef AjoutLectures(request,id):\n    lecture=Lecture(utilisateur=request.user,livre=get_object_or_404(Livre,id=id))\n    lecture.save()",
+        "peekOfCode": "def MesLectures(request,id):\n    mesLectures = Lecture.objects.filter(utilisateur__id=request.user.id).order_by('date')[:3]\n    global is_index\n    categories=categorie.objects.all()\n    MesLectures=Lecture.objects.filter(utilisateur__id=id).order_by('-date')\n    #MesLivres=Livre.objects.all()\n    return render(request, 'E_BOOK_APP/MesLectures.html', {\"categories\":categories,\"lectures\":mesLectures,\"is_index\":is_index,\"MesLectures\":MesLectures})\ndef AjoutLectures(request,id):\n    # Recherche d'une lecture existante ou création d'une nouvelle\n    lecture, created = Lecture.objects.get_or_create(",
         "detail": "E_BOOK_APP.views",
         "documentation": {}
     },
@@ -1453,7 +1453,7 @@
         "kind": 2,
         "importPath": "E_BOOK_APP.views",
         "description": "E_BOOK_APP.views",
-        "peekOfCode": "def AjoutLectures(request,id):\n    lecture=Lecture(utilisateur=request.user,livre=get_object_or_404(Livre,id=id))\n    lecture.save()\ndef SupprimerLecture(request , id):\n    lecture=get_object_or_404(Lecture,id=id)\n    if lecture.utilisateur == request.user:\n      lecture.delete()\n      return redirect(\"MesLectures\",request.user.id) \n    else:\n      return render(request,\"E_BOOK_APP/404.html\")",
+        "peekOfCode": "def AjoutLectures(request,id):\n    # Recherche d'une lecture existante ou création d'une nouvelle\n    lecture, created = Lecture.objects.get_or_create(\n        utilisateur=request.user,\n        livre_id=id,\n        defaults={'date': datetime.now()} # type: ignore\n    )\n    # Si la lecture existe déjà, on met à jour la date\n    if not created:\n        lecture.date = datetime.now() # type: ignore",
         "detail": "E_BOOK_APP.views",
         "documentation": {}
     },

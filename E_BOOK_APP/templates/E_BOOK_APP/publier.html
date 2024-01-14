@@ -20,6 +20,7 @@
 {% endif %}
 
 {% endif %}
+{% load static %}
 <script>
 	function Aut_is_User() {
 		box = document.getElementById("Aut_is_User");
@@ -47,7 +48,7 @@
 			<div class="col-12">
 				<div class="bread-inner">
 					<ul class="bread-list">
-						<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+						<li><a href="/">Home<i class="ti-arrow-right"></i></a></li>
 						<li class="active"><a href="#">Publier</a></li>
 					</ul>
 				</div>
@@ -119,13 +120,30 @@
 								<div class="col-lg-6 col-12">
 									<div class="form-group">
 										<label>Image 1 <span>*</span></label>
-										<input name="image1" type="file" accept="image/png,image/jpeg,image/bmp"
-											placeholder="image 1" required>
+
+										<input name="image1" type="file" hidden="true"
+											accept="image/png,image/jpeg,image/bmp" placeholder="image 1"
+											onchange="loadFile2(event,'file1')" id="f1" required>
+
+										<div class="button" style="margin-bottom: 10px;">
+											<a href="#" onclick="document.getElementById('f1').click()" class="btn"
+												style="color: white;">Choisir Une Image <i class="fa fa-image"></i></a>
+										</div>
+										<img src="{% static 'login-images/profile.png' %}" id="file1" height="30"
+											alt="image1" style="border-radius: 10px;">
 									</div>
 									<div class="form-group">
 										<label>Image 2 (Facultatif) <span></span></label>
 										<input name="image2" type="file" accept="image/png,image/jpeg,image/bmp"
+											onchange="loadFile2(event,'file2')" id="f2" hidden="true"
 											placeholder="image 2">
+										<div class="button" style="margin-bottom: 10px;">
+											<a href="#" onclick="document.getElementById('f2').click()" class="btn"
+												style="color: white;">Choisir Une Image <i class="fa fa-image"></i></a>
+										</div>
+
+										<img src="{% static 'login-images/profile.png' %}" id="file2" height="30px"
+											alt="image2" style="border-radius: 10px;">
 									</div>
 								</div>
 

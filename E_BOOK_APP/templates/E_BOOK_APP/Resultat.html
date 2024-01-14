@@ -6,6 +6,46 @@
     <h2>RESULTATS POUR " {{sujet}} "</h2>
 </div>
 
+<script>
+    function ajouterAuxLectures(idLiv) {
+        idLivre = parseInt(idLiv)
+        fetch("AjoutLectures/" + idLivre, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'), // Assurez-vous d'inclure le token CSRF
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 'livre_id': idLivre }) // Envoyez l'ID du livre dans le corps de la requête
+        })
+            .then(response => {
+
+                alert("Livre ajouté aux lectures avec succès !");
+                // Vous pouvez également mettre à jour l'interface utilisateur ici si nécessaire
+                document.getElementById("countLec").innerText = parseInt(document.getElementById("countLec").innerText) + 1;
+                document.getElementById("countLec2").innerText = document.getElementById("countLec").innerText + " Lectures";
+
+            })
+            .catch(error => {
+                console.error("Erreur lors de l'ajout :", error);
+            });
+    }
+
+    // Fonction pour obtenir le cookie CSRF
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
 
 <div class="product-area most-popular section">
     <div class="container">
@@ -48,12 +88,14 @@
                                 <div class="product-action">
                                     <a title="Quick View" href="{{livre.get_absolute_url}}"><i
                                             class="ti-eye"></i><span>Lire</span></a>
-                                    <a title="Compare" href="{% url 'AjoutLectures' livre.id %}"><i
-                                            class="ti-plus"></i><span>Ajouter aux
+                                    <a title="Ajouter aux lectures" href="javascript:void(0);"
+                                        onclick="ajouterAuxLectures({{livre.id}})"><i class="ti-plus"></i><span>Ajouter
+                                            aux
                                             lectures</span></a>
                                 </div>
                                 <div class="product-action-2">
-                                    <a title="Add to cart" href="{% url 'AjoutLectures' livre.id %}">Ajouter aux
+                                    <a title="Ajouter aux lectures" href="javascript:void(0);"
+                                        onclick="ajouterAuxLectures({{livre.id}})">Ajouter aux
                                         lectures</a>
                                 </div>
                             </div>
